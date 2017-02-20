@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ruleset name="CHASSA REGIONAL QUALIFIERS">
+    <global_rules>
+        <rule operation="BYE_VALUE" value="WIN"/>
+    </global_rules>
     <roundpairing>
         <round_range requires_result_history="NO">
             <round name="1"/>
@@ -24,8 +27,52 @@
         <round_range>
             <round name="4"/>
         </round_range>
+        <result_data type="RECORD"> <!-- can have multiple records per pairing -->
+            <round_result name="1"/>
+            <round_result name="2"/>
+        </result_data>
+        <method type="GIVE_BYE" name="give bye" priority="1">
+            <rule operation="TEAM_HAD_BYE" value="FALSE" priority="1"/>
+            <rule operation="LOWEST_RECORD" value="TRUE" priority="2">
+            </rule>
+        </method>
 
+        <method type="DO_PAIRING" name="round 4 pairing" priority="2">
+            <bracket_org meathod="PULL_UP">
+                <odd_rule>
+                    <rule operation="TEAMS_FROM_SAME_SCHOOL" value="FALSE" priority="1"/>
+                    <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="2"/>
+                </odd_rule>
+                <bracket level="1" name="undefeated">
+                    <filter type="LOSES" value="0"/>
+                </bracket>
 
+                <bracket level="2" name="one loss">
+                    <filter type="LOSES" value="1"/>
+                </bracket>
+
+                <bracket level="3" name="two losses">
+                    <filter type="LOSES" value="2"/>
+                </bracket>
+            </bracket_org>
+
+            <rule operation="SAME_BRACKET" value="TRUE" priority="1"/>
+            <rule operation="MET_SWITCH_SIDES" value="TRUE" priority="2"/>
+            <rule operation="BALANCE_SIDES" value="TRUE" priority="3"/>
+        </method>
     </roundpairing>
+
+    <judge_pairing>
+        <round_range>
+            <round name="1"/>
+            <round name="2"/>
+            <round name="3"/>
+            <round name="4"/>
+        </round_range>
+
+        <rule operation="SAME_TEAM" value="FALSE" priority="1"/>
+        <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="2"/>
+        <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="3"/>
+    </judge_pairing>
 
 </ruleset>
