@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="CHASSA REGIONAL QUALIFIERS">
+    <roundpairing>
+        <round_range requires_result_history="NO">
+            <round name="1"/>
+            <round name="2"/>
+            <round name="3"/>
+        </round_range>
+        <method type="GIVE_BYE" name="give bye" priority="1">
+            <rule operation="TEAM_HAD_BYE" value="FALSE" priority="1"/>
+            <rule operation="SAME_SCHOOL_HAD_BYE" value="FALSE" priority="2"/>
+        </method>
+
+        <method type="DO_PAIRING" name="ROUND 1-3 pairing" priority="2">
+            <rule operation="BALANCE_SIDES" value="TRUE" priority="1"/>
+            <rule operation="TEAMS_FROM_SAME_SCHOOL" value="FALSE" priority="2"/>
+            <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="3"/>
+            <rule operation="TEAM_MET_SCHOOL_BEFORE" value="FALSE" priority="4"/>
+            <rule operation="MEETING_SWITCH_SIDES" value="TRUE" priority="5"/>
+        </method>
+    </roundpairing>
+
+    <roundpairing requires_result_history="YES">
+        <round_range>
+            <round name="4"/>
+        </round_range>
+
+
+    </roundpairing>
+
+</ruleset>
