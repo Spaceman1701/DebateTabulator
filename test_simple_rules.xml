@@ -2,6 +2,7 @@
 <ruleset name="CHASSA REGIONAL QUALIFIERS">
     <global_rules>
         <rule operation="BYE_VALUE" value="WIN"/>
+        <rule operation="RAND_METHOD" value="SORT_SHUFFLE_NEG"/>
     </global_rules>
     <roundpairing>
         <round_range requires_result_history="NO">
