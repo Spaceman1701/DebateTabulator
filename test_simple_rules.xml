@@ -72,8 +72,8 @@
         </round_range>
 
         <rule operation="SAME_TEAM" value="FALSE" priority="1"/>
-        <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="2"/>
-        <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="3"/>
+        <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="2"/>
+        <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="3"/>
     </judge_pairing>
 
 </ruleset>

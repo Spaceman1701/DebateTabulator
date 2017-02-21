@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<team_types>
+    <type name="POLICY_TEAM">
+        <data>
+            <param type="SCHOOL" name="school_code"/>
+            <param type="COMPETITOR" name="competitor_one"/>
+            <param type="COMPETITOR" name="competitor_two"/>
+        </data>
+        <history>
+            <param type="SIDE" name="side"/>
+            <param type="POLICY_TEAM" name="opponent"/>
+            <param type="JUDGE" name="judge"/>
+        </history>
+    </type>
+
+    <type name="LD_TEAM">
+        <data>
+            <param type="SCHOOL" name="school_code"/>
+            <param type="COMPETITOR" name="competitor"/>
+        </data>
+        <history>
+            <param type="SIDE" name="side"/>
+            <param type="LD_TEAM" name="opponent"/>
+            <param type="JUDGE" name="judge"/>
+        </history>
+    </type>
+
+    <type name="PF_TEAM">
+        <data>
+            <param type="SCHOOL" name="school_code"/>
+            <param type="COMPETITOR" name="competitor_one"/>
+            <param type="COMPETITOR" name="competitor_two"/>
+        </data>
+        <history>
+            <param type="SIDE" name="side"/>
+            <param type="PF_TEAM" name="opponent"/>
+            <param type="JUDGE" name="judge"/>
+        </history>
+    </type>
+
+    <!-- do the rest here -->
+</team_types>
