@@ -32,7 +32,6 @@
             <param type="COMPETITOR" name="competitor_two"/>
         </data>
         <history>
-            <param type="SIDE" name="side"/>
             <param type="PF_TEAM" name="opponent"/>
             <param type="JUDGE" name="judge"/>
         </history>
