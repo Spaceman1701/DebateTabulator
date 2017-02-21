@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ruleset name="CHASSA REGIONAL QUALIFIERS">
+<ruleset name="CHASSA REGIONAL QUALIFIERS" application="SIDED_DEBATE">
     <global_rules>
         <rule operation="BYE_VALUE" value="WIN"/>
         <rule operation="RAND_METHOD" value="SORT_SHUFFLE_NEG"/>
     </global_rules>
-    <roundpairing>
+    <round_pairing>
         <round_range requires_result_history="NO">
             <round name="1"/>
             <round name="2"/>
@@ -22,13 +22,13 @@
             <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="4"/>
             <rule operation="TEAM_MET_SCHOOL_BEFORE" value="FALSE" priority="5"/>
         </method>
-    </roundpairing>
+    </round_pairing>
 
-    <roundpairing requires_result_history="YES">
+    <round_pairing requires_result_history="YES">
         <round_range>
             <round name="4"/>
         </round_range>
-        <result_data type="RECORD"> <!-- can have multiple records per pairing -->
+        <result_data>
             <round_result name="1"/>
             <round_result name="2"/>
         </result_data>
@@ -61,7 +61,7 @@
             <rule operation="MET_SWITCH_SIDES" value="TRUE" priority="2"/>
             <rule operation="BALANCE_SIDES" value="TRUE" priority="3"/>
         </method>
-    </roundpairing>
+    </round_pairing>
 
     <judge_pairing>
         <round_range>

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <team_types>
+    <type name="CX_DEBATE">
+        <team name="CX_TEAM">
+            <param type="SCHOOL" name="school_code"/>
+            <param type="COMPETITOR" name="competitor_one"/>
+            <param type="COMPETITOR" name="competitor_two"/>
+        </team>
+        <round name="CX ROUND">
+            <param type="SIDE" name="winner"/>
+            <param type="CX_TEAM" name="aff_team"/>
+            <param type="CX_TEAM" name="neg_team"/>
+            <param type="JUDGE" name="judge"/>
+        </round>
+    </type>
     <type name="POLICY_TEAM">
         <data>
             <param type="SCHOOL" name="school_code"/>
