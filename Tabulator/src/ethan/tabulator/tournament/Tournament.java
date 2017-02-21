@@ -15,6 +15,9 @@ public class Tournament<T extends Round> {
     Set<Judge> judges;
     RoundHistory<T> history;
 
+    private int numberRoundsRun;
+
+    private int numebrRoundsPaired;
 
     public Tournament() {
         teams = new HashSet<>();

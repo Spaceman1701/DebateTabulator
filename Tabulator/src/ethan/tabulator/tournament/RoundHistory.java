@@ -20,4 +20,11 @@ public class RoundHistory<T extends Round> {
     public List<T> getRounds(int roundNumber) {
         return rounds.get(roundNumber);
     }
+
+    public void addRound(int roundNumber, T round) {
+        if (rounds.containsKey(roundNumber)) {
+            rounds.put(roundNumber, new ArrayList<T>());
+        }
+        rounds.get(roundNumber).add(round);
+    }
 }
