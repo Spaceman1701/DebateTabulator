@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<competitor_types>
+    <type name="CHSAA_TEAM_DEBATE_COMPETITOR">
+        <points max="35"/>
+    </type>
+
+    <type name="CHSAA_SINGLE_DEBATE_COMPETITOR">
+        <points max="50"/>
+    </type>
+
+    <type name="CHSAA_SINGLE_SPEECH_COMPETITOR">
+        <points max="50"/>
+    </type>
+</competitor_types>

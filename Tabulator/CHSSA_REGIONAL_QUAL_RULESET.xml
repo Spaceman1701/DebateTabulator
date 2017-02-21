@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ruleset name="CHASSA REGIONAL QUALIFIERS" application="SIDED_DEBATE">
-    <global_rules>
-        <rule operation="BYE_VALUE" value="WIN"/>
-        <rule operation="RAND_METHOD" value="SORT_SHUFFLE_NEG"/>
-    </global_rules>
-    <round_pairing>
-        <round_range requires_result_history="NO">
+    <round_pairing requires_result_history="NO">
+        <round_range>
             <round name="1"/>
             <round name="2"/>
             <round name="3"/>
@@ -39,7 +35,7 @@
         </method>
 
         <method type="DO_PAIRING" name="round 4 pairing" priority="2">
-            <bracket_org meathod="PULL_UP">
+            <bracket_org method="PULL_UP">
                 <odd_rule>
                     <rule operation="TEAMS_FROM_SAME_SCHOOL" value="FALSE" priority="1"/>
                     <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="2"/>
