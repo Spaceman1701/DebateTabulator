@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ruleset name="CHASSA REGIONAL QUALIFIERS" application="SIDED_DEBATE">
-    <round_pairing requires_result_history="NO">
+    <round_pairing requires_result_history="FALSE">
         <round_range>
             <round name="1"/>
             <round name="2"/>
@@ -20,7 +20,7 @@
         </method>
     </round_pairing>
 
-    <round_pairing requires_result_history="YES">
+    <round_pairing requires_result_history="TRUE">
         <round_range>
             <round name="4"/>
         </round_range>
@@ -67,9 +67,11 @@
             <round name="4"/>
         </round_range>
 
-        <rule operation="SAME_TEAM" value="FALSE" priority="1"/>
-        <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="2"/>
-        <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="3"/>
+        <method type="DO_JUDGE_PAIRING" name="judge paring" priority="1">
+            <rule operation="SAME_TEAM" value="FALSE" priority="1"/>
+            <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="2"/>
+            <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="3"/>
+        </method>
     </judge_pairing>
 
 </ruleset>

@@ -25,6 +25,14 @@
                         </xs:all>
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="judge_pairing" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element maxOccurs="1" minOccurs="1" ref="round_range"/>
+                            <xs:element maxOccurs="1" minOccurs="1" ref="method"/>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
             </xs:all>
         </xs:complexType>
     </xs:element>
