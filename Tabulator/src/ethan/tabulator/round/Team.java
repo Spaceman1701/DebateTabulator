@@ -18,4 +18,8 @@ public class Team {
         this.code = code;
         competitors = new ArrayList<>();
     }
+
+    public List<Competitor> getCompetitors() {
+        return competitors;
+    }
 }

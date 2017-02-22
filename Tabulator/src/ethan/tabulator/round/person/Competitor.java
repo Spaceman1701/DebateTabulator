@@ -14,4 +14,12 @@ public class Competitor {
     public String getName() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other.getClass() == Competitor.class) {
+            return name.equals(((Competitor)other).name);
+        }
+        return false;
+    }
 }
