@@ -32,5 +32,6 @@ public abstract class Round {
     }
 
     public abstract Set<Competitor> getCompetitors();
+    public abstract Set<Team> getTeams();
 
 }

@@ -1,6 +1,8 @@
 package ethan.tabulator.ruleset.rule;
 
 import ethan.tabulator.round.DebateRound;
+import ethan.tabulator.round.Round;
+import ethan.tabulator.tournament.RoundHistory;
 
 /**
  * Created by Ethan on 2/21/2017.
@@ -22,7 +24,7 @@ public class RuleResultPair {
         return expectedResult;
     }
 
-    public boolean testExpected(DebateRound round) {
-        return rule.testRound(round) == expectedResult;
+    public boolean testExpected(Round round, RoundHistory history) {
+        return rule.testRound(round, history) == expectedResult;
     }
 }

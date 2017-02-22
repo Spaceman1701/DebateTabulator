@@ -8,6 +8,6 @@ import ethan.tabulator.tournament.Tournament;
 /**
  * Created by Ethan on 2/21/2017.
  */
-public interface Rule {
-    boolean testRound(Round round, RoundHistory history);
+public interface Rule<T extends Round> {
+    boolean testRound(T round, RoundHistory<T> history);
 }

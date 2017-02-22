@@ -39,6 +39,14 @@ public class DebateRound extends Round{
         return competitors;
     }
 
+    @Override
+    public Set<Team> getTeams() {
+        Set<Team> teams = new HashSet<>();
+        teams.add(aff);
+        teams.add(neg);
+        return teams;
+    }
+
     public Side getTeamSide(Team t) {
         if (t.equals(aff)) {
             return Side.AFF;
@@ -46,5 +54,13 @@ public class DebateRound extends Round{
             return Side.NEG;
         }
         return null;
+    }
+
+    public Team getAff() {
+        return aff;
+    }
+
+    public Team getNeg() {
+        return neg;
     }
 }
