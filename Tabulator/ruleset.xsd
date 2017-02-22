@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ruleset">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="application" type="xs:string"/>
+            <xs:all>
+                <xs:element name="round_pairing"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
