@@ -2,13 +2,16 @@
 <event_types>
     <type parent="SIDED_DEBATE" name="CX_DEBATE">
         <competitors type="DEFAULT_TEAM_DEBATE_COMPETITOR" number="2"/>
+        <win value="MAJORITY"/>
     </type>
 
     <type parent="UNSIDED_DEBATE" name="PF_DEBATE">
         <competitors type="DEFAULT_TEAM_DEBATE_COMPETITOR" number="2"/>
+        <win value="MAJORITY"/>
     </type>
 
     <type parent="SIDED_DEBATE" name="LD_DEBATE">
         <competitors type="DEFAULT_SINGLE_DEBATE_COMPETITOR" number="1"/>
+        <win value="MAJORITY"/>
     </type>
 </event_types>
