@@ -3,11 +3,49 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="ruleset">
         <xs:complexType>
-            <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="application" type="xs:string"/>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="application" type="xs:string" use="required"/>
             <xs:all>
-                <xs:element name="round_pairing"/>
+                <xs:element name="round_pairing" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="requires_result_history" type="xs:boolean" use="required"/>
+                        <xs:all>
+                            <xs:element maxOccurs="1" minOccurs="1" ref="round_range"/>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
             </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="round_range">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="round" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="method">
+        <xs:complexType>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="'priority" type="xs:integer" use="required"/>
+            <xs:all>
+                <xs:element maxOccurs="unbounded" minOccurs="1" ref="rule"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="rule">
+        <xs:complexType>
+            <xs:attribute name="operation" type="xs:string"/>
+            <xs:attribute name="value" type="xs:boolean"/>
+            <xs:attribute name="priority" type="xs:integer"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
