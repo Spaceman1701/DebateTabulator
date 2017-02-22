@@ -5,21 +5,14 @@ import ethan.tabulator.round.Round;
 import ethan.tabulator.round.Side;
 import ethan.tabulator.round.TournamentRound;
 import ethan.tabulator.tournament.RoundHistory;
-import ethan.tabulator.tournament.Tournament;
 
-import java.lang.annotation.Annotation;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import static ethan.tabulator.ruleset.rule.RuleFunctions.BALANCE_SIDES;
-import static javafx.scene.input.KeyCode.T;
 
 /**
  * Created by Ethan on 2/21/2017.
  */
 @SuppressWarnings("unchecked")
-public final class RuleFunctions {
+public final class PairingRuleFunctions {
     public static final String MEETING_SWITCH_SIDES = "MEETING_SWITCH_SIDES";
     public static final String BALANCE_SIDES = "BALANCE_SIDES";
     public static final String TEAMS_FROM_SAME_SCHOOL = "TEAMS_FROM_SAME_SCHOOL";
@@ -29,7 +22,7 @@ public final class RuleFunctions {
     public static final String SAME_BRACKET = "SAME_BRACKET";
 
 
-    private RuleFunctions() {}
+    private PairingRuleFunctions() {}
 
     public static String targetTypeToString(int targetType) {
         switch (targetType) {
@@ -47,7 +40,7 @@ public final class RuleFunctions {
     }
 
     public static Rule getRule(String name, int targetType) {
-        Class[] rules = RuleFunctions.class.getDeclaredClasses();
+        Class[] rules = PairingRuleFunctions.class.getDeclaredClasses();
 
         for (Class rule : rules) {
             RuleData ruleData = (RuleData)rule.getDeclaredAnnotation(RuleData.class);
