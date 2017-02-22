@@ -1,11 +1,13 @@
 package ethan.tabulator.tournament;
 
 import ethan.tabulator.round.Round;
+import ethan.tabulator.round.Team;
 import ethan.tabulator.round.TournamentRound;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Ethan on 2/20/2017.
@@ -27,5 +29,17 @@ public class RoundHistory<T extends Round> {
 
     public List<TournamentRound<T>> getAllRounds() {
         return rounds;
+    }
+
+    public List<T> getTeamHistory(Team t) {
+        List<T> teamHistory = new ArrayList<>();
+        for (TournamentRound<T> tournamentRounds : rounds) {
+            for (T round : tournamentRounds.getRounds()) {
+                if (round.getCompetitors().contains(t)) {
+                    teamHistory.add(round);
+                }
+            }
+        }
+        return teamHistory;
     }
 }

@@ -54,7 +54,7 @@
             </bracket_org>
 
             <rule operation="SAME_BRACKET" value="TRUE" priority="1"/>
-            <rule operation="MET_SWITCH_SIDES" value="TRUE" priority="2"/>
+            <rule operation="MEETING_SWITCH_SIDES" value="TRUE" priority="2"/>
             <rule operation="BALANCE_SIDES" value="TRUE" priority="3"/>
         </method>
     </round_pairing>
