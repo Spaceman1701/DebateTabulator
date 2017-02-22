@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="ruleset">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="round_pairing" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" ref="round_range"/>
+                            <xsd:element name="result_data" maxOccurs="1" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="round_result" maxOccurs="unbounded" minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="name" type="xsd:integer"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element maxOccurs="1" minOccurs="0" ref="bracket_org"/>
+                            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="method"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="requires_result_history" type="xsd:boolean" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="judge_pairing" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="1" minOccurs="1" ref="round_range"/>
+                            <xsd:element maxOccurs="1" minOccurs="1" ref="method"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="application" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="round_range">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="round" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:attribute name="name" type="xsd:integer" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="method">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="bracket_org"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rule"/>
+            </xsd:sequence>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="priority" type="xsd:integer" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="rule">
+        <xsd:complexType>
+            <xsd:attribute name="operation" type="xsd:string" use="required"/>
+            <xsd:attribute name="value" type="xsd:boolean" use="required"/>
+            <xsd:attribute name="priority" type="xsd:integer" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="bracket_org">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="odd_rule">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rule"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="bracket" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="filter" maxOccurs="unbounded" minOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:attribute name="type" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="value" type="xsd:string" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="level" type="xsd:integer" use="required"/>
+                        <xsd:attribute name="name" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="method" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

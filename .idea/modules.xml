@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DebateTabulator.iml" filepath="$PROJECT_DIR$/.idea/DebateTabulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tabulator/Tabulator.iml" filepath="$PROJECT_DIR$/Tabulator/Tabulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/TabulatorGUI/TabulatorGUI.iml" filepath="$PROJECT_DIR$/TabulatorGUI/TabulatorGUI.iml" />
     </modules>

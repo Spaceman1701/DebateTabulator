@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ruleset name="CHASSA REGIONAL QUALIFIERS" application="SIDED_DEBATE">
-    <round_pairing requires_result_history="FALSE">
+    <round_pairing requires_result_history="false">
         <round_range>
             <round name="1"/>
             <round name="2"/>
             <round name="3"/>
         </round_range>
         <method type="GIVE_BYE" name="give bye" priority="1">
-            <rule operation="TEAM_HAD_BYE" value="FALSE" priority="1"/>
-            <rule operation="SAME_SCHOOL_HAD_BYE" value="FALSE" priority="2"/>
+            <rule operation="TEAM_HAD_BYE" value="false" priority="1"/>
+            <rule operation="SAME_SCHOOL_HAD_BYE" value="false" priority="2"/>
         </method>
 
         <method type="DO_PAIRING" name="ROUND 1-3 pairing" priority="2">
-            <rule operation="MEETING_SWITCH_SIDES" value="TRUE" priority="1"/>
-            <rule operation="BALANCE_SIDES" value="TRUE" priority="2"/>
-            <rule operation="TEAMS_FROM_SAME_SCHOOL" value="FALSE" priority="3"/>
-            <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="4"/>
-            <rule operation="TEAM_MET_SCHOOL_BEFORE" value="FALSE" priority="5"/>
+            <rule operation="MEETING_SWITCH_SIDES" value="true" priority="1"/>
+            <rule operation="BALANCE_SIDES" value="true" priority="2"/>
+            <rule operation="TEAMS_FROM_SAME_SCHOOL" value="false" priority="3"/>
+            <rule operation="TEAMS_MET_BEFORE" value="false" priority="4"/>
+            <rule operation="TEAM_MET_SCHOOL_BEFORE" value="false" priority="5"/>
         </method>
     </round_pairing>
 
-    <round_pairing requires_result_history="TRUE">
+    <round_pairing requires_result_history="true">
         <round_range>
             <round name="4"/>
         </round_range>
@@ -29,16 +29,15 @@
             <round_result name="2"/>
         </result_data>
         <method type="GIVE_BYE" name="give bye" priority="1">
-            <rule operation="TEAM_HAD_BYE" value="FALSE" priority="1"/>
-            <rule operation="LOWEST_RECORD" value="TRUE" priority="2">
-            </rule>
+            <rule operation="TEAM_HAD_BYE" value="false" priority="1"/>
+            <rule operation="LOWEST_RECORD" value="true" priority="2"/>
         </method>
 
         <method type="DO_PAIRING" name="round 4 pairing" priority="2">
             <bracket_org method="PULL_UP">
                 <odd_rule>
-                    <rule operation="TEAMS_FROM_SAME_SCHOOL" value="FALSE" priority="1"/>
-                    <rule operation="TEAMS_MET_BEFORE" value="FALSE" priority="2"/>
+                    <rule operation="TEAMS_FROM_SAME_SCHOOL" value="false" priority="1"/>
+                    <rule operation="TEAMS_MET_BEFORE" value="false" priority="2"/>
                 </odd_rule>
                 <bracket level="1" name="undefeated">
                     <filter type="LOSES" value="0"/>
@@ -53,9 +52,9 @@
                 </bracket>
             </bracket_org>
 
-            <rule operation="SAME_BRACKET" value="TRUE" priority="1"/>
-            <rule operation="MEETING_SWITCH_SIDES" value="TRUE" priority="2"/>
-            <rule operation="BALANCE_SIDES" value="TRUE" priority="3"/>
+            <rule operation="SAME_BRACKET" value="true" priority="1"/>
+            <rule operation="MEETING_SWITCH_SIDES" value="true" priority="2"/>
+            <rule operation="BALANCE_SIDES" value="true" priority="3"/>
         </method>
     </round_pairing>
 
@@ -68,9 +67,9 @@
         </round_range>
 
         <method type="DO_JUDGE_PAIRING" name="judge paring" priority="1">
-            <rule operation="SAME_TEAM" value="FALSE" priority="1"/>
-            <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="FALSE" priority="2"/>
-            <rule operation="SEEN_TEAM_BEFORE" value="FALSE" priority="3"/>
+            <rule operation="SAME_TEAM" value="false" priority="1"/>
+            <rule operation="SEEN_TEAM_BEFORE_ON_SIDE" value="false" priority="2"/>
+            <rule operation="SEEN_TEAM_BEFORE" value="false" priority="3"/>
         </method>
     </judge_pairing>
 
