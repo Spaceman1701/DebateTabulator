@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="competitor_types">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="type" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:all>
+                            <xsd:element name="points">
+                                <xsd:complexType>
+                                    <xsd:attribute name="max" type="xsd:unsignedInt"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:all>
+                        <xsd:attribute name="type" type="xsd:string"/>
+                        <xsd:attribute name="name" type="xsd:string"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

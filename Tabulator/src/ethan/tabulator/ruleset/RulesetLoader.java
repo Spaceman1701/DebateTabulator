@@ -3,14 +3,10 @@ package ethan.tabulator.ruleset;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 
 /**
  * Created by Ethan on 2/21/2017.
@@ -35,7 +31,7 @@ public class RulesetLoader {
     }
 
     private void loadRuleset(String location) {
-        String schemaFile = "ruleset.xsd";
+        String schemaFile = "schema/ruleset.xsd";
         SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
             Schema schema = schemaFactory.newSchema(new File(schemaFile));

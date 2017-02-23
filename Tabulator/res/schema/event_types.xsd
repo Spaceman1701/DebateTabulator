@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="event_types">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="type" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="competitors"/>
+                            <xsd:element ref="win"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="parent" type="xsd:string" use="required"/>
+                        <xsd:attribute name="name" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="competitors">
+        <xsd:complexType>
+            <xsd:attribute name="type" type="xsd:string" use="required"/>
+            <xsd:attribute name="number" type="xsd:positiveInteger" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="win" type="xsd:string">
+        <xsd:complexType>
+            <xsd:attribute name="value" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

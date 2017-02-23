@@ -4,7 +4,7 @@
         <points max="35"/>
     </type>
 
-    <type ntype="SINGLE_DEBATE_COMPETITOR" ame="CHSAA_SINGLE_DEBATE_COMPETITOR">
+    <type type="SINGLE_DEBATE_COMPETITOR" name="CHSAA_SINGLE_DEBATE_COMPETITOR">
         <points max="50"/>
     </type>
 
