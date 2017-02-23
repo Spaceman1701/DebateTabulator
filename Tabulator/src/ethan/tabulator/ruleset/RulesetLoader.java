@@ -1,5 +1,12 @@
 package ethan.tabulator.ruleset;
 
+import com.sun.org.apache.xerces.internal.parsers.DOMParser;
+import com.sun.org.apache.xml.internal.serialize.OutputFormat;
+import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -31,13 +38,6 @@ public class RulesetLoader {
     }
 
     private void loadRuleset(String location) {
-        String schemaFile = "schema/ruleset.xsd";
-        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-        try {
-            Schema schema = schemaFactory.newSchema(new File(schemaFile));
-            Validator validator = schema.newValidator();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        }
+
     }
 }
