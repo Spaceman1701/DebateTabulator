@@ -20,9 +20,9 @@ import java.io.File;
  */
 public class RulesetLoader {
 
+    private static final String RULSET_SCHEMA = "ruleset.xsd";
 
-
-    public RulesetLoader(String competitorTypesLocation, String eventTypesLocation, String rulesetLocation) {
+    public RulesetLoader(String competitorTypesLocation, String eventTypesLocation, String rulesetLocation) throws InvalidXMLException {
         loadCompeitorTypes(competitorTypesLocation);
         loadEventTypes(eventTypesLocation);
 
@@ -37,7 +37,21 @@ public class RulesetLoader {
 
     }
 
-    private void loadRuleset(String location) {
+    private void loadRuleset(String location) throws InvalidXMLException {
+        Document ruleset = XMLUtils.loadXMLDocument(location, RULSET_SCHEMA);
+        Node root = ruleset.getDocumentElement();
+        System.out.println(root.getNodeName());
+    }
 
+    /**
+     * just here to experiment a bit
+     * @param args
+     */
+    public static void main(String[] args) {
+        try {
+            RulesetLoader rl = new RulesetLoader(null, null, "CHSSA_REGIONAL_QUAL_RULESET.xml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
