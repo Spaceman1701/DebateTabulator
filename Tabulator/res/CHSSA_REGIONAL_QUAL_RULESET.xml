@@ -19,7 +19,6 @@
             <rule operation="TEAM_MET_SCHOOL_BEFORE" value="false" priority="5"/>
         </method>
     </round_pairing>
-
     <round_pairing requires_result_history="true">
         <round_range>
             <round name="4"/>
@@ -57,7 +56,6 @@
             <rule operation="BALANCE_SIDES" value="true" priority="3"/>
         </method>
     </round_pairing>
-
     <judge_pairing>
         <round_range>
             <round name="1"/>

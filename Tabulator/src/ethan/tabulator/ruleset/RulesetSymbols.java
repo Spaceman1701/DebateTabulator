@@ -63,7 +63,7 @@ public final class RulesetSymbols {
     public static final class FilterTag {
         public static final String VAR_TYPE = "type";
         public static final String VAR_VALUE = "value";
-        private FilterTag() {new AssertionError();}
+        private FilterTag() {throw new AssertionError();}
     }
 
 

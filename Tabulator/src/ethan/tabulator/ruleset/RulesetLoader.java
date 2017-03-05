@@ -41,6 +41,12 @@ public class RulesetLoader {
         Document ruleset = XMLUtils.loadXMLDocument(location, RULSET_SCHEMA);
         Node root = ruleset.getDocumentElement();
         System.out.println(root.getNodeName());
+        NodeList topNl = root.getChildNodes();
+        for (int i = 0; i < topNl.getLength(); i++) {
+            if (topNl.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                System.out.println(topNl.item(i).getNodeName());
+            }
+        }
     }
 
     /**
