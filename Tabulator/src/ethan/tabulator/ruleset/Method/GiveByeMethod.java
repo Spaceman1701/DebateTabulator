@@ -1,4 +1,4 @@
-package ethan.tabulator.ruleset.Method;
+package ethan.tabulator.ruleset.method;
 
 /**
  * Created by Ethan on 2/21/2017.

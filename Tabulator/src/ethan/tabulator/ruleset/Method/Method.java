@@ -1,4 +1,4 @@
-package ethan.tabulator.ruleset.Method;
+package ethan.tabulator.ruleset.method;
 
 import ethan.tabulator.ruleset.rule.RuleResultPair;
 
