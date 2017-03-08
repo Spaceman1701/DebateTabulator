@@ -11,7 +11,37 @@ public class BracketOrgElement {
     private List<BracketElement> brackets;
     private final BracketGeneratorElement generator;
 
-    public BracketOrgElement(String method, OddRuleElement oddRule, List<BracketElement> brackets, BracketGeneratorElement bg) {
+    public BracketOrgElement(String method, OddRuleElement oddRule, List<BracketElement> brackets) {
+        this.method = method;
+        this.oddRule = oddRule;
+        this.brackets = brackets;
+        generator = null;
+    }
 
+    public BracketOrgElement(String method, OddRuleElement oddRule, BracketGeneratorElement bg) {
+        this.method = method;
+        this.oddRule = oddRule;
+        this.brackets = null;
+        generator = bg;
+    }
+
+    public boolean useGenerator() {
+        return brackets == null;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public OddRuleElement getOddRule() {
+        return oddRule;
+    }
+
+    public List<BracketElement> getBrackets() {
+        return brackets;
+    }
+
+    public BracketGeneratorElement getGenerator() {
+        return generator;
     }
 }

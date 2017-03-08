@@ -1,6 +1,4 @@
-package ethan.tabulator.ruleset.xmlbinding.ruleset.method;
-
-import ethan.tabulator.ruleset.xmlbinding.ruleset.RulesetElement;
+package ethan.tabulator.ruleset.xmlbinding.ruleset.pairingmethod;
 
 /**
  * Created by Ethan on 3/6/2017.

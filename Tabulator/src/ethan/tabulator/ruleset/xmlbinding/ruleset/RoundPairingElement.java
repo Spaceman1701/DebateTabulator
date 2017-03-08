@@ -1,6 +1,6 @@
 package ethan.tabulator.ruleset.xmlbinding.ruleset;
 
-import ethan.tabulator.ruleset.xmlbinding.ruleset.method.MethodElement;
+import ethan.tabulator.ruleset.xmlbinding.ruleset.pairingmethod.MethodElement;
 import ethan.tabulator.ruleset.xmlbinding.ruleset.roundrange.RoundRangeElement;
 
 import java.util.List;
