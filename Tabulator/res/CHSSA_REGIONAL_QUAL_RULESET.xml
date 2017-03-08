@@ -28,6 +28,9 @@
             <round_result name="2"/>
         </result_data>
         <method type="GIVE_BYE" name="give bye" priority="1">
+            <bracket_org>
+                <bracket_generator type="LOSES"/>
+            </bracket_org>
             <rule operation="TEAM_HAD_BYE" value="false" priority="1"/>
             <rule operation="LOWEST_RECORD" value="true" priority="2"/>
         </method>

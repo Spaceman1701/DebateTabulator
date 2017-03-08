@@ -26,7 +26,7 @@ public class RulesetElement {
     }
 
     public void addJudgePairing(JudgePairingElement jp) {
-        judgePairings.add(jp)  ;
+        judgePairings.add(jp);
     }
 
     public List<RoundPairingElement> getRoundPairings() {

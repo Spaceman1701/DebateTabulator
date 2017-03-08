@@ -74,27 +74,34 @@
     <xsd:element name="bracket_org">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="odd_rule">
+                <xsd:element name="odd_rule" maxOccurs="1" minOccurs="0">
                     <xsd:complexType>
                         <xsd:sequence>
                             <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rule"/>
                         </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
-                <xsd:element name="bracket" maxOccurs="unbounded" minOccurs="1">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="filter" maxOccurs="unbounded" minOccurs="1">
-                                <xsd:complexType>
-                                    <xsd:attribute name="type" type="xsd:string" use="required"/>
-                                    <xsd:attribute name="value" type="xsd:string" use="required"/>
-                                </xsd:complexType>
-                            </xsd:element>
-                        </xsd:sequence>
-                        <xsd:attribute name="level" type="xsd:integer" use="required"/>
-                        <xsd:attribute name="name" type="xsd:string" use="required"/>
-                    </xsd:complexType>
-                </xsd:element>
+                <xsd:choice>
+                    <xsd:element name="bracket" maxOccurs="unbounded" minOccurs="1">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="filter" maxOccurs="unbounded" minOccurs="1">
+                                    <xsd:complexType>
+                                        <xsd:attribute name="type" type="xsd:string" use="required"/>
+                                        <xsd:attribute name="value" type="xsd:string" use="required"/>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                            <xsd:attribute name="level" type="xsd:integer" use="required"/>
+                            <xsd:attribute name="name" type="xsd:string" use="required"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="bracket_generator" maxOccurs="1" minOccurs="1">
+                        <xsd:complexType>
+                            <xsd:attribute name="type" type="xsd:string"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
             </xsd:sequence>
             <xsd:attribute name="method" type="xsd:string" use="required"/>
         </xsd:complexType>
