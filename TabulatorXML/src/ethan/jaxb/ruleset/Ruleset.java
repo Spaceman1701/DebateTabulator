@@ -6,17 +6,12 @@
 //
 
 
-package ethan.tabulator.ruleset.jaxb;
+package ethan.jaxb.ruleset;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -93,9 +88,9 @@ import javax.xml.bind.annotation.XmlType;
 public class Ruleset {
 
     @XmlElement(name = "round_pairing", required = true)
-    protected List<Ruleset.RoundPairing> roundPairing;
+    protected List<RoundPairing> roundPairing;
     @XmlElement(name = "judge_pairing", required = true)
-    protected List<Ruleset.JudgePairing> judgePairing;
+    protected List<JudgePairing> judgePairing;
     @XmlAttribute(name = "name", required = true)
     protected String name;
     @XmlAttribute(name = "application", required = true)
@@ -103,69 +98,69 @@ public class Ruleset {
 
     /**
      * Gets the value of the roundPairing property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roundPairing property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoundPairing().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Ruleset.RoundPairing }
-     * 
-     * 
+     *
+     *
      */
-    public List<Ruleset.RoundPairing> getRoundPairing() {
+    public List<RoundPairing> getRoundPairing() {
         if (roundPairing == null) {
-            roundPairing = new ArrayList<Ruleset.RoundPairing>();
+            roundPairing = new ArrayList<RoundPairing>();
         }
         return this.roundPairing;
     }
 
     /**
      * Gets the value of the judgePairing property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the judgePairing property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getJudgePairing().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Ruleset.JudgePairing }
-     * 
-     * 
+     *
+     *
      */
-    public List<Ruleset.JudgePairing> getJudgePairing() {
+    public List<JudgePairing> getJudgePairing() {
         if (judgePairing == null) {
-            judgePairing = new ArrayList<Ruleset.JudgePairing>();
+            judgePairing = new ArrayList<JudgePairing>();
         }
         return this.judgePairing;
     }
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getName() {
         return name;
@@ -173,11 +168,11 @@ public class Ruleset {
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -185,11 +180,11 @@ public class Ruleset {
 
     /**
      * Gets the value of the application property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getApplication() {
         return application;
@@ -197,11 +192,11 @@ public class Ruleset {
 
     /**
      * Sets the value of the application property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setApplication(String value) {
         this.application = value;
@@ -210,9 +205,9 @@ public class Ruleset {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -225,8 +220,8 @@ public class Ruleset {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -242,11 +237,11 @@ public class Ruleset {
 
         /**
          * Gets the value of the roundRange property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link RoundRange }
-         *     
+         *
          */
         public RoundRange getRoundRange() {
             return roundRange;
@@ -254,11 +249,11 @@ public class Ruleset {
 
         /**
          * Sets the value of the roundRange property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link RoundRange }
-         *     
+         *
          */
         public void setRoundRange(RoundRange value) {
             this.roundRange = value;
@@ -266,11 +261,11 @@ public class Ruleset {
 
         /**
          * Gets the value of the method property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Method }
-         *     
+         *
          */
         public Method getMethod() {
             return method;
@@ -278,11 +273,11 @@ public class Ruleset {
 
         /**
          * Sets the value of the method property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Method }
-         *     
+         *
          */
         public void setMethod(Method value) {
             this.method = value;
@@ -293,9 +288,9 @@ public class Ruleset {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -329,8 +324,8 @@ public class Ruleset {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -354,11 +349,11 @@ public class Ruleset {
 
         /**
          * Gets the value of the roundRange property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link RoundRange }
-         *     
+         *
          */
         public RoundRange getRoundRange() {
             return roundRange;
@@ -366,11 +361,11 @@ public class Ruleset {
 
         /**
          * Sets the value of the roundRange property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link RoundRange }
-         *     
+         *
          */
         public void setRoundRange(RoundRange value) {
             this.roundRange = value;
@@ -378,11 +373,11 @@ public class Ruleset {
 
         /**
          * Gets the value of the resultData property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Ruleset.RoundPairing.ResultData }
-         *     
+         *
          */
         public Ruleset.RoundPairing.ResultData getResultData() {
             return resultData;
@@ -390,11 +385,11 @@ public class Ruleset {
 
         /**
          * Sets the value of the resultData property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Ruleset.RoundPairing.ResultData }
-         *     
+         *
          */
         public void setResultData(Ruleset.RoundPairing.ResultData value) {
             this.resultData = value;
@@ -402,11 +397,11 @@ public class Ruleset {
 
         /**
          * Gets the value of the bracketOrg property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link BracketOrg }
-         *     
+         *
          */
         public BracketOrg getBracketOrg() {
             return bracketOrg;
@@ -414,11 +409,11 @@ public class Ruleset {
 
         /**
          * Sets the value of the bracketOrg property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link BracketOrg }
-         *     
+         *
          */
         public void setBracketOrg(BracketOrg value) {
             this.bracketOrg = value;
@@ -426,25 +421,25 @@ public class Ruleset {
 
         /**
          * Gets the value of the method property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the method property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMethod().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Method }
-         * 
-         * 
+         *
+         *
          */
         public List<Method> getMethod() {
             if (method == null) {
@@ -455,7 +450,7 @@ public class Ruleset {
 
         /**
          * Gets the value of the requiresResultHistory property.
-         * 
+         *
          */
         public boolean isRequiresResultHistory() {
             return requiresResultHistory;
@@ -463,7 +458,7 @@ public class Ruleset {
 
         /**
          * Sets the value of the requiresResultHistory property.
-         * 
+         *
          */
         public void setRequiresResultHistory(boolean value) {
             this.requiresResultHistory = value;
@@ -472,9 +467,9 @@ public class Ruleset {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -494,8 +489,8 @@ public class Ruleset {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -504,33 +499,33 @@ public class Ruleset {
         public static class ResultData {
 
             @XmlElement(name = "round_result", required = true)
-            protected List<Ruleset.RoundPairing.ResultData.RoundResult> roundResult;
+            protected List<RoundResult> roundResult;
 
             /**
              * Gets the value of the roundResult property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the roundResult property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoundResult().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link Ruleset.RoundPairing.ResultData.RoundResult }
-             * 
-             * 
+             *
+             *
              */
-            public List<Ruleset.RoundPairing.ResultData.RoundResult> getRoundResult() {
+            public List<RoundResult> getRoundResult() {
                 if (roundResult == null) {
-                    roundResult = new ArrayList<Ruleset.RoundPairing.ResultData.RoundResult>();
+                    roundResult = new ArrayList<RoundResult>();
                 }
                 return this.roundResult;
             }

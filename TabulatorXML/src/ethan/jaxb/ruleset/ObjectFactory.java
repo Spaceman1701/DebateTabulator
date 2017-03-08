@@ -6,7 +6,7 @@
 //
 
 
-package ethan.tabulator.ruleset.jaxb;
+package ethan.jaxb.ruleset;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

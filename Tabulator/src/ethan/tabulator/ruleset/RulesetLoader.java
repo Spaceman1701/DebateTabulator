@@ -3,8 +3,8 @@ package ethan.tabulator.ruleset;
 import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
-import ethan.tabulator.ruleset.jaxb.*;
-import ethan.tabulator.ruleset.jaxb.Ruleset;
+import ethan.jaxb.XMLHandler;
+import ethan.jaxb.ruleset.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -42,11 +42,10 @@ public class RulesetLoader {
     }
 
     private void loadRuleset(String location) throws Exception {
-        JAXBContext context = JAXBContext.newInstance("ethan.tabulator.ruleset.jaxb");
-        Unmarshaller unmarshaller = context.createUnmarshaller();
-        ethan.tabulator.ruleset.jaxb.Ruleset rs = (Ruleset)
-                unmarshaller.unmarshal(new File(XMLUtils.RESOURCE_DIR + location));
+        ethan.jaxb.ruleset.Ruleset rs = XMLHandler.loadRuleset(XMLUtils.RESOURCE_DIR + location);
         System.out.println(rs.getName());
+        RoundRange rr = rs.getRoundPairing().get(0).getRoundRange();
+        System.out.println(rr.getRound().get(0).getName());
     }
 
     /**

@@ -6,17 +6,12 @@
 //
 
 
-package ethan.tabulator.ruleset.jaxb;
+package ethan.jaxb.ruleset;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -93,7 +88,7 @@ public class BracketOrg {
 
     @XmlElement(name = "odd_rule")
     protected BracketOrg.OddRule oddRule;
-    protected List<BracketOrg.Bracket> bracket;
+    protected List<Bracket> bracket;
     @XmlElement(name = "bracket_generator")
     protected BracketOrg.BracketGenerator bracketGenerator;
     @XmlAttribute(name = "method", required = true)
@@ -101,11 +96,11 @@ public class BracketOrg {
 
     /**
      * Gets the value of the oddRule property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BracketOrg.OddRule }
-     *     
+     *
      */
     public BracketOrg.OddRule getOddRule() {
         return oddRule;
@@ -113,11 +108,11 @@ public class BracketOrg {
 
     /**
      * Sets the value of the oddRule property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BracketOrg.OddRule }
-     *     
+     *
      */
     public void setOddRule(BracketOrg.OddRule value) {
         this.oddRule = value;
@@ -125,40 +120,40 @@ public class BracketOrg {
 
     /**
      * Gets the value of the bracket property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bracket property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBracket().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BracketOrg.Bracket }
-     * 
-     * 
+     *
+     *
      */
-    public List<BracketOrg.Bracket> getBracket() {
+    public List<Bracket> getBracket() {
         if (bracket == null) {
-            bracket = new ArrayList<BracketOrg.Bracket>();
+            bracket = new ArrayList<Bracket>();
         }
         return this.bracket;
     }
 
     /**
      * Gets the value of the bracketGenerator property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BracketOrg.BracketGenerator }
-     *     
+     *
      */
     public BracketOrg.BracketGenerator getBracketGenerator() {
         return bracketGenerator;
@@ -166,11 +161,11 @@ public class BracketOrg {
 
     /**
      * Sets the value of the bracketGenerator property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BracketOrg.BracketGenerator }
-     *     
+     *
      */
     public void setBracketGenerator(BracketOrg.BracketGenerator value) {
         this.bracketGenerator = value;
@@ -178,11 +173,11 @@ public class BracketOrg {
 
     /**
      * Gets the value of the method property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMethod() {
         return method;
@@ -190,11 +185,11 @@ public class BracketOrg {
 
     /**
      * Sets the value of the method property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMethod(String value) {
         this.method = value;
@@ -203,9 +198,9 @@ public class BracketOrg {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -228,8 +223,8 @@ public class BracketOrg {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -238,7 +233,7 @@ public class BracketOrg {
     public static class Bracket {
 
         @XmlElement(required = true)
-        protected List<BracketOrg.Bracket.Filter> filter;
+        protected List<Filter> filter;
         @XmlAttribute(name = "level", required = true)
         protected BigInteger level;
         @XmlAttribute(name = "name", required = true)
@@ -246,29 +241,29 @@ public class BracketOrg {
 
         /**
          * Gets the value of the filter property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the filter property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFilter().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link BracketOrg.Bracket.Filter }
-         * 
-         * 
+         *
+         *
          */
-        public List<BracketOrg.Bracket.Filter> getFilter() {
+        public List<Filter> getFilter() {
             if (filter == null) {
-                filter = new ArrayList<BracketOrg.Bracket.Filter>();
+                filter = new ArrayList<Filter>();
             }
             return this.filter;
         }

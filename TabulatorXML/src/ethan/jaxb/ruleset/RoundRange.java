@@ -6,17 +6,12 @@
 //
 
 
-package ethan.tabulator.ruleset.jaxb;
+package ethan.jaxb.ruleset;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -54,33 +49,33 @@ import javax.xml.bind.annotation.XmlType;
 public class RoundRange {
 
     @XmlElement(required = true)
-    protected List<RoundRange.Round> round;
+    protected List<Round> round;
 
     /**
      * Gets the value of the round property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the round property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRound().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoundRange.Round }
-     * 
-     * 
+     *
+     *
      */
-    public List<RoundRange.Round> getRound() {
+    public List<Round> getRound() {
         if (round == null) {
-            round = new ArrayList<RoundRange.Round>();
+            round = new ArrayList<Round>();
         }
         return this.round;
     }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tabulator/Tabulator.iml" filepath="$PROJECT_DIR$/Tabulator/Tabulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/TabulatorGUI/TabulatorGUI.iml" filepath="$PROJECT_DIR$/TabulatorGUI/TabulatorGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TabulatorXML/TabulatorXML.iml" filepath="$PROJECT_DIR$/TabulatorXML/TabulatorXML.iml" />
     </modules>
   </component>
 </project>
