@@ -32,7 +32,7 @@
                 <bracket_generator type="LOSES"/>
             </bracket_org>
             <rule operation="TEAM_HAD_BYE" value="false" priority="1"/>
-            <rule operation="LOWEST_RECORD" value="true" priority="2"/>
+            <rule operation="BY_BRACKET" value="true" priority="2"/>
         </method>
 
         <method type="DO_PAIRING" name="round 4 pairing" priority="2">
@@ -54,7 +54,7 @@
                 </bracket>
             </bracket_org>
 
-            <rule operation="SAME_BRACKET" value="true" priority="1"/>
+            <rule operation="BY_BRACKET" value="true" priority="1"/>
             <rule operation="MEETING_SWITCH_SIDES" value="true" priority="2"/>
             <rule operation="BALANCE_SIDES" value="true" priority="3"/>
         </method>

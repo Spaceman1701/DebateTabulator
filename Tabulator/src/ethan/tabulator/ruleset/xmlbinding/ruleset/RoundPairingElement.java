@@ -11,4 +11,17 @@ import java.util.List;
 public class RoundPairingElement {
     private RoundRangeElement roundRange;
     private List<MethodElement> methods;
+
+    public RoundPairingElement(RoundRangeElement roundRange, List<MethodElement> methods) {
+        this.methods = methods;
+        this.roundRange = roundRange;
+    }
+
+    public RoundRangeElement getRoundRange() {
+        return roundRange;
+    }
+
+    public List<MethodElement> getMethods() {
+        return methods;
+    }
 }
