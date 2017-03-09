@@ -1,6 +1,6 @@
 package ethan.jaxb;
 
-import ethan.jaxb.ruleset.Ruleset;
+import ethan.jaxb.ruleset.RulesetRoot;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -17,9 +17,9 @@ public class XMLHandler {
     private static final String COMPETITOR_TYPES = PACKAGE_LOCATION + ".competitortype";
 
 
-    public static Ruleset loadRuleset(String rulesetLocation) throws JAXBException {
+    public static RulesetRoot loadRuleset(String rulesetLocation) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(RULESET_PACKAGE);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
-        return (Ruleset)unmarshaller.unmarshal(new File(rulesetLocation));
+        return (RulesetRoot)unmarshaller.unmarshal(new File(rulesetLocation));
     }
 }

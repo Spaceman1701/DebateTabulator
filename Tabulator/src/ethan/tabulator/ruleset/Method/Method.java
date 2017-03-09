@@ -8,19 +8,29 @@ import java.util.List;
 /**
  * Created by Ethan on 2/21/2017.
  */
-public abstract class Method {
+public class Method {
     public enum Type {
-        GIVE_BYE, DO_PAIRING
+        GIVE_BYE, DO_PAIRING;
+
+        public static Type fromString(String type) {
+            switch (type.toUpperCase()) {
+                case "GIVE_BYE":
+                    return GIVE_BYE;
+                case "DO_PAIRING":
+                    return DO_PAIRING;
+            }
+            return null;
+        }
     }
 
     private final Type type;
     private final String name;
     private final int priority;
 
-    protected List<RuleResultPair> rules;
+    private final List<RuleResultPair> rules;
 
 
-    public Method(Type type, String name, int priority) {
+    private Method(Type type, String name, int priority) {
         this.type = type;
         this.name = name;
         this.priority = priority;
@@ -39,5 +49,27 @@ public abstract class Method {
 
     public int getPriority() {
         return priority;
+    }
+
+    public static class MethodBuilder {
+        private final Type type;
+        private final String name;
+        private final int priority;
+
+        private List<RuleResultPair> rules;
+
+        public MethodBuilder(Type type, String name, int priority) {
+            this.type = type;
+            this.name = name;
+            this.priority = priority;
+        }
+
+        public void addRule(RuleResultPair rule) {
+            rules.add(rule);
+        }
+
+        public Method build() {
+            return new Method(type, name, priority);
+        }
     }
 }

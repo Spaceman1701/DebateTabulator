@@ -45,11 +45,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ruleset }
+     * Create an instance of {@link RulesetRoot }
      * 
      */
-    public Ruleset createRuleset() {
-        return new Ruleset();
+    public RulesetRoot createRuleset() {
+        return new RulesetRoot();
     }
 
     /**
@@ -61,19 +61,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ruleset.RoundPairing }
+     * Create an instance of {@link RulesetRoot.RoundPairing }
      * 
      */
-    public Ruleset.RoundPairing createRulesetRoundPairing() {
-        return new Ruleset.RoundPairing();
+    public RulesetRoot.RoundPairing createRulesetRoundPairing() {
+        return new RulesetRoot.RoundPairing();
     }
 
     /**
-     * Create an instance of {@link Ruleset.RoundPairing.ResultData }
+     * Create an instance of {@link RulesetRoot.RoundPairing.ResultData }
      * 
      */
-    public Ruleset.RoundPairing.ResultData createRulesetRoundPairingResultData() {
-        return new Ruleset.RoundPairing.ResultData();
+    public RulesetRoot.RoundPairing.ResultData createRulesetRoundPairingResultData() {
+        return new RulesetRoot.RoundPairing.ResultData();
     }
 
     /**
@@ -117,11 +117,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ruleset.JudgePairing }
+     * Create an instance of {@link RulesetRoot.JudgePairing }
      * 
      */
-    public Ruleset.JudgePairing createRulesetJudgePairing() {
-        return new Ruleset.JudgePairing();
+    public RulesetRoot.JudgePairing createRulesetJudgePairing() {
+        return new RulesetRoot.JudgePairing();
     }
 
     /**
@@ -133,11 +133,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ruleset.RoundPairing.ResultData.RoundResult }
+     * Create an instance of {@link RulesetRoot.RoundPairing.ResultData.RoundResult }
      * 
      */
-    public Ruleset.RoundPairing.ResultData.RoundResult createRulesetRoundPairingResultDataRoundResult() {
-        return new Ruleset.RoundPairing.ResultData.RoundResult();
+    public RulesetRoot.RoundPairing.ResultData.RoundResult createRulesetRoundPairingResultDataRoundResult() {
+        return new RulesetRoot.RoundPairing.ResultData.RoundResult();
     }
 
     /**

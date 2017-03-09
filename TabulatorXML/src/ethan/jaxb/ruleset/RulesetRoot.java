@@ -85,7 +85,7 @@ import java.util.List;
     "judgePairing"
 })
 @XmlRootElement(name = "ruleset")
-public class Ruleset {
+public class RulesetRoot {
 
     @XmlElement(name = "round_pairing", required = true)
     protected List<RoundPairing> roundPairing;
@@ -114,7 +114,7 @@ public class Ruleset {
      *
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Ruleset.RoundPairing }
+     * {@link RulesetRoot.RoundPairing }
      *
      *
      */
@@ -143,7 +143,7 @@ public class Ruleset {
      *
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Ruleset.JudgePairing }
+     * {@link RulesetRoot.JudgePairing }
      *
      *
      */
@@ -339,7 +339,7 @@ public class Ruleset {
         @XmlElement(name = "round_range", required = true)
         protected RoundRange roundRange;
         @XmlElement(name = "result_data")
-        protected Ruleset.RoundPairing.ResultData resultData;
+        protected RulesetRoot.RoundPairing.ResultData resultData;
         @XmlElement(name = "bracket_org")
         protected BracketOrg bracketOrg;
         @XmlElement(required = true)
@@ -376,10 +376,10 @@ public class Ruleset {
          *
          * @return
          *     possible object is
-         *     {@link Ruleset.RoundPairing.ResultData }
+         *     {@link RulesetRoot.RoundPairing.ResultData }
          *
          */
-        public Ruleset.RoundPairing.ResultData getResultData() {
+        public RulesetRoot.RoundPairing.ResultData getResultData() {
             return resultData;
         }
 
@@ -388,10 +388,10 @@ public class Ruleset {
          *
          * @param value
          *     allowed object is
-         *     {@link Ruleset.RoundPairing.ResultData }
+         *     {@link RulesetRoot.RoundPairing.ResultData }
          *
          */
-        public void setResultData(Ruleset.RoundPairing.ResultData value) {
+        public void setResultData(RulesetRoot.RoundPairing.ResultData value) {
             this.resultData = value;
         }
 
@@ -519,7 +519,7 @@ public class Ruleset {
              *
              * <p>
              * Objects of the following type(s) are allowed in the list
-             * {@link Ruleset.RoundPairing.ResultData.RoundResult }
+             * {@link RulesetRoot.RoundPairing.ResultData.RoundResult }
              *
              *
              */
